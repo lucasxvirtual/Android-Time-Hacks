@@ -38,7 +38,7 @@ create an object of **GenericReclyclerAdapter** passing the right parameters, in
 
 
 ## AndroidIdLinker
-- Shortcut to link your views in xml to java code **(only tested on linux, can't link fragments or includes)**
+- Shortcut to link your views in xml to java code **(only tested on linux and windows, can't link fragments or includes)**
 
 usage:
 
