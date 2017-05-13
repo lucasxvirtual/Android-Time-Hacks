@@ -19,6 +19,12 @@ def file_link(input_file, output_file = None, modifier = None, fragment_view = N
                 print "there is a fragment in your code that wasn't linked: {0}".format(
                     line.split('id/')[1].split('"')[0])
                 print '=========================================================================================\n\n'
+
+            elif(type == 'include'):
+                print '======================================== WARNING ========================================'
+                print "there is a include in your code that wasn't linked: {0}".format(
+                    line.split('id/')[1].split('"')[0])
+                print '=========================================================================================\n\n'
             else:
                 typelist.append((type, line.split('id/')[1].split('"')[0]))
 
@@ -98,6 +104,9 @@ def main(argv):
                     output_file.write('======================================== FILE : {0} ========================================\n'.format(filename))
                     file_link(open(directory + '/' + filename), output_file, modifier, fragment_view)
                     output_file.write('\n\n')
+    else:
+    	file_link(input_file, output_file, modifier, fragment_view)
+    	print '\n\n'
 
     print '======================================== FINISHED ========================================'
 
