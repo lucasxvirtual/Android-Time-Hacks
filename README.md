@@ -59,3 +59,19 @@ possible arguments:
 
 usage example: **python android_id_linker.py -a ~/android_project/app/src/main/res/layout/ -o file.txt -m private -f view**
 
+
+## SharedPreferencesHelper
+- Shortcut to use shared preferences.
+
+usage:
+```java
+    //put string on shared preferences
+    new SharedPreferencesHelper(context).putString("my key", "my string");
+    
+    //get string from shared preferences (default value = null)
+    String myString = new SharedPreferencesHelper(context).getString("my key")
+    
+    //erase shared preferences
+    new SharedPreferencesHelper(context).erase();
+```
+
